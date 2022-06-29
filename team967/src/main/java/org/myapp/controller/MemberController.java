@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Controller
-@RequestMapping("/includes/*")
+@RequestMapping("/member/*")
 @Log4j
 @AllArgsConstructor
 public class MemberController {
@@ -33,10 +33,6 @@ public class MemberController {
 		model.addAttribute("msg", "Access Denied");
 	}
 	
-	@GetMapping("/header")
-	public void header() {
-		
-	}
 	
 	//로그인버튼
 	/*
