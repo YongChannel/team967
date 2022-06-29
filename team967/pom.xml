@@ -18,6 +18,38 @@
 	</properties>
 	
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-web</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-taglibs -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-taglibs</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-config</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-core</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		
+		
 		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 		<!-- json 파일 변환 라이브러리 -->
 		<dependency>
@@ -26,7 +58,7 @@
 		    <version>2.9.0</version>
 		</dependency>
 		
-	
+		
 		<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
 		<!-- jdbc 로그 기록을 위한 라이브러리 -->
 		<dependency>
@@ -35,7 +67,7 @@
 		    <version>1.16</version>
 		</dependency>
 		
-	
+		
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<!-- sql 매핑 프레임워크 -->
 		<dependency>
@@ -44,7 +76,7 @@
 		    <version>3.4.6</version>
 		</dependency>
 		
-
+		
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<!-- 마이바티스와 스프링 연결 -->
 		<dependency>
@@ -61,7 +93,7 @@
 		    <artifactId>spring-tx</artifactId>
 		    <version>${org.springframework-version}</version>
 		</dependency>
-			
+		
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 		<!-- 스프링 jdbc -->
@@ -71,7 +103,7 @@
 		    <version>${org.springframework-version}</version>
 		</dependency>
 		
-	
+		
 		<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
 		<!-- maven hikaricp 2.7.4 -->
 		<dependency>
@@ -80,7 +112,7 @@
 		    <version>2.7.4</version>
 		</dependency>
 		
-	
+		
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<!-- maven lombok 1.18.20 -->
 		<dependency>
@@ -99,8 +131,8 @@
 		    <version>${org.springframework-version}</version>
 		    <scope>test</scope>
 		</dependency>
-	
-	
+		
+		
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -119,7 +151,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-				
+		
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -152,14 +184,14 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-
+		
 		<!-- @Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-				
+		
 		<!-- Servlet -->
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<!-- version 3.1.0 변경 -->
@@ -187,7 +219,7 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-	
+		
 		<!-- Test -->
 		<!-- version 4.12 변경 -->
 		<dependency>
