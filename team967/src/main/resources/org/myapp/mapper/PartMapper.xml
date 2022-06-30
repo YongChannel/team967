@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.myapp.mapper.PartMapper">
+	
+	<!-- 목록보기 -->
+	<select id="getPart" resultType="org.myapp.domain.PartVO">
+		<![CDATA[select * from tbl_part where rownum < 11 order by partcode desc]]>
+	</select>
+	
+	<!-- 목록보기-페이지처리 -->
+	<select id="getPartWithPaging" resultType="org.myapp.domain.PartVO">
+		select partcode, partname, nickname, library, drw_no, drw_img, common, remark, productname
+		from (select rownum rn, partcode, partname, nickname, library, drw_no, drw_img, common, remark, productname 
+		    from (select * from tbl_part
+		
+		<include refid="criteria"></include>
+		
+		    <![CDATA[order by partcode desc)
+		    	where rownum <= (#{pageNum} * #{amount})) 
+		where rn > ((#{pageNum} -1) * #{amount})]]>
+	</select>
+	
+	<!-- 품목 등록 -->
+	<insert id="insert">
+		insert into tbl_part(partcode, partname, nickname, library, drw_no, drw_img, common, remark, productname)
+		values(seq_part.nextval, #{partname}, #{nickname}, #{library}, #{drw_no}, #{drw_img}, #{common}, #{remark}, #{productname})
+	</insert>
+	
+	
+	
+</mapper>
