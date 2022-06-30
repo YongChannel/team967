@@ -31,10 +31,12 @@
 					
 					<button class="btn btn-default btn-sm" type="button"><i class="fa fa-search"></i></button>
 					
-					<div class="col-lg-2" style="float:right">
+					<form action="/board/register" method="post">
+							<div class="col-lg-2" style="float:right">
 						<button type="button" class="btn btn-success">등록</button>
 						<button type="button" class="btn btn-info">수정</button>
 						<a href="javascript:void(0);" class="btn btn-danger" onclick="deleteConfirm();">삭제</a>
+						
 						<script>
 
 							function deleteConfirm(){
@@ -49,16 +51,12 @@
 							</script>
 
 						
-					</div>
+					</div><br>
 					<!-- /.col-lg-2 -->
-				</div>
-                <!-- /.row -->
-                
-                <div class="row">
-	                <div class="col-lg-12">
-	                    <div class="table-responsive">
-	                        <table class="table table-bordered table-hover table-striped">
-	                        	<tbody>
+					<br>
+							<div class="table-responsive" style="width:100%">
+		                        <table class="table table-bordered table-hover table-striped">
+		                        	<tbody>
 	                                <tr>
 	                                    <th class="text-center">업체코드</th>
 	                                    <td><input type="text" class="form-control"></td>
