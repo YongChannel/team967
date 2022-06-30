@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MemberVO {
-	private String employee;
-	private Long password;
-	private String name;
-	private String department;
+	private String employee; //회사명
+	private Long password; //비밀번호
+	private String name; //이름
+	private String department; //부서명
 }
