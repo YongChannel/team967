@@ -69,16 +69,16 @@
                                 </div>
                                 <p>부서</p>
                                 <div class="form-group">
-                                <select id="Select" class="form-control">
-                                	<option selected>부서를 선택하세요.</option>
-                                    <option>개발 부서</option>
-                                    <option>생산 부서</option>
-                                    <option>구매 부서</option>
-                                </select>
+	                                <select id="Select" class="form-control">
+	                                	<option selected>부서를 선택하세요.</option>
+	                                    <option>개발 부서</option>
+	                                    <option>생산 부서</option>
+	                                    <option>구매 부서</option>
+	                                </select>
                                 </div>
                                 
                                 <button type="submit" class="btn btn-success">가입</button>
-                                <button type="button" onclick="location.href='/member/login'" class="btn btn-secondary" style="float:right">취소</button>
+                                <button type="button" onclick="location.href='/member/login'" class="btn btn-warning" style="float:right">취소</button>
 
 							</form>
 						</fieldset>
