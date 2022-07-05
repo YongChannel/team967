@@ -37,13 +37,82 @@
 					<button class="btn btn-default btn-sm" type="button"><i class="fa fa-search"></i></button>
 					
 					<div class="col-lg-2" style="float:right">
-						<button type="button" class="btn btn-primary">등록</button>
-						<button type="button" class="btn btn-primary">수정</button>
-						<button type="button" class="btn btn-primary">삭제</button>
+					
+					<!-- 등록 Modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">등록</button>
+					<!-- 등록 Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">등록하시겠습니까?</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        ...
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+					        <button type="button" class="btn btn-primary">확인</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+						
+						
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">수정</button>
+					<!-- 수정 Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">수정하시겠습니까?</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        ...
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+					        <button type="button" class="btn btn-primary">확인</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					
+					
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">삭제</button>
+					<!-- 삭제 Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">삭제하시겠습니까?</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        ...
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+					        <button type="button" class="btn btn-primary">확인</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
 					</div>
 					
 					<!-- /.col-lg-2 -->
 				</div>
+				
+					
+				
                 <!-- /.row -->
                 
                 
@@ -71,10 +140,10 @@
 	                                    
 	                                
 	                                    <th class="text-center" >소요일정</th>
-	                                    <td><input type="text" class="form-control"></td>
+	                                    <td><input type="date" class="form-control"></td>
 	                                    
 	                                    <th class="text-center" >조달납기</th>
-	                                    <td><input type="text" class="form-control"></td>
+	                                    <td><input type="date" class="form-control"></td>
 	                                </tr>
 	                            </tbody>
 	                        </table>
