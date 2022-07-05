@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.myapp.mapper.SupportMapper">
+	
+	<!-- sql-->
+	
+	<!-- 조달계획 목록보기 -->
+	<select id="getSupport" resultType="org.myapp.domain.SupportVO">
+		<![CDATA[select * from tbl_support order by supportNo desc]]>
+	</select>
+	
+	
+	<!-- 조달계획 -페이지처리 -->
+	<select id="getSupportWithPaging" resultType="org.myapp.domain.SupportVO">
+		select SupportNo, MaterialProcess, DaySchedule, Requirement, DeliveryDate,PartCode
+		from (select rownum rn, SupportNo, MaterialProcess, DaySchedule, Requirement, DeliveryDate,PartCode 
+		    from (select * from tbl_support)
+		
+		<include refid="criteria"></include>
+		
+		    <![CDATA[order by supportNo desc)
+		    	where rownum <= (#{pageNum} * #{amount})) 
+		where rn > ((#{pageNum} -1) * #{amount})]]>
+	</select>
+	
+	
+	<!-- 조달계획 등록 -->
+	<insert id="insert">
+		insert into tbl_support(SupportNo, MaterialProcess, DaySchedule, Requirement, DeliveryDate, PartCode)
+		values(seq_support.nextval, #{MaterialProcess}, #{DaySchedule}, #{Requirement}, #{DeliveryDate}, #{PartCode})
+	</insert>
+	
+	
+	<!-- 조달계획 수정 -->
+	<update id="update">
+	update tbl_support 
+	set MaterialProcess=#{MaterialProcess}, DaySchedule=#{DaySchedule}, Requirement=#{Requirement}, DeliveryDate=#{DeliveryDate},PartCode=#{PartCode}
+	where SupportNo=#{SupportNo}
+	</update>
+
+
+	<!-- 조달계획 삭제  -->
+	<delete id="delete">
+	delete from tbl_support where SupportNo=#{SupportNo}
+	</delete>
+	
+	
+	
+</mapper>
